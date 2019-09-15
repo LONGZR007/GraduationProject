@@ -1,0 +1,28 @@
+//设置模块为 STA 模式
+AT+CWMODE=1
+
+//设置模块连接到 Wifi 路由器
+AT+CWJAP="1207000","123456789"
+
+//连接原子云服务器
+//30867703608463315810 是设备 1 的设备编号， 12345678 是设备密码
+AT+ATKCLDSTA="00238536581518755643","12345678"    // 练手的
+AT+ATKCLDSTA="79459799892981462448","12345678"    // 毕设用
+
+ATE0    // 关闭回显
+
+AT+RESTORE                      // 恢复出厂设置
+AT+CWMODE=1                // 设置模块为 STA 模式
+AT+CWSTARTSMART=2     // 设置模块为 Airkiss 模式
+
+AT+ATKCLDCLS    // 断开云连接
+
+SetTP    // 设置临时开门密码
+
+/* 常用网址 */
+
+/* 文件系统 */
+http://elm-chan.org/fsw/ff/00index_e.html  
+
+/* 原子云 */
+https://cloud.alientek.com/
